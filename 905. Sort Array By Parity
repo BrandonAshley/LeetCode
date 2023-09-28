@@ -1,0 +1,24 @@
+class Solution:
+    def sortArrayByParity(self, nums: List[int]) -> List[int]:
+        #Memory
+        temp=[]
+        for i in nums:
+            if i % 2==0:
+                temp.insert(0,i)
+            else:
+                temp.append(i)
+        
+        return temp
+
+        '''
+        #Runtime
+        rest=[]
+        for i in nums:
+            if i % 2==0:
+                temp.append(i)
+            else:
+                rest.append(i)
+                
+        temp.extend(rest)
+        return temp
+        '''
