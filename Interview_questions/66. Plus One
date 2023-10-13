@@ -1,0 +1,10 @@
+    def plusOne(self, digits: List[int]) -> List[int]:
+
+
+        return [int(i) for i in str(int(''.join(map(str, digits)))+1)]
+
+
+        #map(str, digits)   Converts int in List to string
+        #int(''.join(_))+1  Joins as string and convert to int and add
+        #[int(i) for i in str(__)]  convert to string then add as list of integers
+        #
