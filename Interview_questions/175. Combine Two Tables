@@ -1,0 +1,3 @@
+def combine_two_tables(person: pd.DataFrame, address: pd.DataFrame) -> pd.DataFrame:
+    new=person.merge(address,how='left')
+    return new[['firstName','lastName','city','state']]
