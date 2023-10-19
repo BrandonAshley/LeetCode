@@ -1,0 +1,11 @@
+    def backspaceCompare(self, s: str, t: str) -> bool:
+        def remove(str_):
+            result=[]
+            for i in str_:
+                if i !='#':
+                    result.append(i)
+                elif result:
+                    result.pop()
+            return "".join(result)
+
+        return remove(s)==remove(t)
