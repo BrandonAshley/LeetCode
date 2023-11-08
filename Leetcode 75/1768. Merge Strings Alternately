@@ -1,0 +1,11 @@
+    def mergeAlternately(self, word1: str, word2: str) -> str:
+        i =min(len(word1),len(word2))
+
+        merged=''
+        for k in range(0,i):
+            merged=merged+word1[k]+word2[k]
+        
+        word1=word1[i:]
+        word2=word2[i:]
+
+        return merged+word1+word2
