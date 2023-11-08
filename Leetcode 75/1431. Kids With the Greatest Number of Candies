@@ -1,0 +1,10 @@
+    def kidsWithCandies(self, candies: List[int], extraCandies: int) -> List[bool]:
+        out=[]
+        for i in candies:
+            s=i+extraCandies
+            if max(candies)>s:
+                out.append(False)
+            else:
+                out.append(True)
+
+        return out
