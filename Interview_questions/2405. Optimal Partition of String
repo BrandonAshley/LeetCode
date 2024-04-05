@@ -1,0 +1,14 @@
+#Solution by atharva77
+
+  def partitionString(self, s: str) -> int:
+        temp = ""
+        count = 0
+        for i in range(len(s)):
+            if s[i] not in temp:
+                temp += s[i]
+            else:
+                temp = s[i]
+                count += 1
+        if len(temp) != 0:
+            count += 1
+        return count
