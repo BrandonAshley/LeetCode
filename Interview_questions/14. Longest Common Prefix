@@ -1,0 +1,22 @@
+    def longestCommonPrefix(self, strs: List[str]) -> str:
+        
+        #print(strs)
+        temp=''
+        hold=100
+        for i in strs:
+            hold=min(hold,len(i))
+        #print(hold)
+        
+        for i in range(0,hold):
+            #print(i,s,temp)
+            s=set()
+            for k in strs:
+                #print(k[i])
+                s.add(k[i])
+            #print(s)
+            if len(s)==1:
+                temp+=list(s)[0]
+            else:
+                return temp
+
+        return temp
