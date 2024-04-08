@@ -1,0 +1,21 @@
+    def countStudents(self, students: List[int], sandwiches: List[int]) -> int:
+
+        #print(students)
+        #print(sandwiches)   
+        r=len(students)
+        stop=len(students)
+        while r>0:
+            #print(students,sandwiches)
+            if students[0]==sandwiches[0]:
+                students.pop(0)
+                sandwiches.pop(0)
+                stop=len(students)
+            else:
+                students.append(students[0])
+                students.pop(0)
+                stop-=1
+            r=len(students)
+            if stop==0:
+                r=0
+
+        return len(students)
